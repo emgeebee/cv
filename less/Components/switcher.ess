@@ -1,0 +1,8 @@
+.switcher-header{
+	display: inline-block;
+	margin-right: @marginwidth; 
+}
+.switcher{
+	display: inline-block;
+	display: none;
+}

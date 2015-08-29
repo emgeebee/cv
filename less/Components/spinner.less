@@ -1,0 +1,61 @@
+@-webkit-keyframes slidein {
+0%   {
+  	.rotate(-30deg);
+  	display: none;
+  }
+50%  {
+  	.rotate(0deg);
+  	display: block;
+  }
+100% {
+  	.rotate(30deg);
+  	display: none;
+  }
+}
+
+.spin-control{
+	display: none;
+}
+
+.skill-list span{
+	&:after{
+		content: " / ";
+	}
+	&:last-of-type:after{
+		content: "";
+	}
+}
+
+.skill-list.spinner span{
+	&:after{
+		content: "";
+	}
+}
+
+.spinner{
+	position: relative;
+	display: inline-block;
+	color: red;
+	height: 1em;
+	line-height: 1em;
+	width: 150px;
+	overflow: hidden;
+	span{
+		display: block;
+		position: absolute;
+		line-height: 1em;
+		margin: 0;
+		top: 0;
+		width: 250px;
+		.rotate(-30deg);
+	}
+	span:nth-of-type(1){
+		.animation (slidein 3s 0.5s ease infinite);
+	}
+	span:nth-of-type(2){
+		.animation (slidein 3s 1.5s ease infinite);
+	}
+	span:nth-of-type(3){
+		.animation (slidein 3s 2.5s ease infinite);
+	}
+}

@@ -1,0 +1,21 @@
+.detail-block .detail{
+	display: inline!important;
+}
+
+.summary-block .detail, .transition .detail{
+	display: none;
+}
+.transition .summary-item{
+	display: inline;
+	text-transform:uppercase;
+}
+.summary-block .summary-item{
+	display: list-item;
+	margin-left: @marginwidth;
+	margin-bottom: @verticalheight;
+	text-transform:uppercase;
+}
+
+@media screen and (max-width: 690px) {
+	@import "expandingcontent-reponsive.less";
+}
